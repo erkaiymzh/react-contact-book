@@ -20,7 +20,7 @@ const ContactsList = ({getContacts, contacts, deleteContact}) => {
             onMouseEnter={() => setHover(item.id)}
             onMouseLeave={() => setHover("")}
             style={{ width: '18rem', border: selectedProduct === item.id? "1px solid black" : "", backgroundColor: hover === item.id? "grey" : "white" }}>
-        <Card.Img variant="top" src="https://linklive.org/wp-content/uploads/2019/11/2.png" />
+        <Card.Img variant="top" src="https://cdn0.iconfinder.com/data/icons/contact-us-butterscotch-series/256/Contacts-512.png" />
      <Card.Body>
        <Card.Title>Contact</Card.Title>
     <Card.Text>
@@ -32,6 +32,9 @@ const ContactsList = ({getContacts, contacts, deleteContact}) => {
     <Button variant="primary">Edit</Button>
     </Link>
     <Button onClick={() => deleteContact(item.id)} variant="danger">Delete</Button>
+    <Link to={`/details/${item.id}`}>
+    <Button variant="success">Details</Button>
+    </Link>
 
   </Card.Body>
 </Card>

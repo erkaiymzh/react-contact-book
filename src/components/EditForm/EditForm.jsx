@@ -33,6 +33,7 @@ const EditForm = ({getOneContact, oneContact, updateContact}) => {
     return (
         <div className='container d-flex flex-column align-items-center'>
         <br />
+    <img style={{width: "200px", height: "230px"}} src="https://i.gifer.com/CBDF.gif" alt="" />
     <input value={name} onChange={(e)=> setName(e.target.value)} type="text" placeholder='Name'/>
     <br />
     <input value={surname} onChange={(e)=> setSurname(e.target.value)} type="text" placeholder='Surname'/>

@@ -7,6 +7,7 @@ import ContactsCreate from './components/Contacts/ContactsCreate';
 import axios from 'axios';
 import ContactsList from './components/Contacts/ContactsList';
 import EditForm from './components/EditForm/EditForm';
+import Details from './components/Details/Details';
 
 const App = () => {
   const API = "http://localhost:8001/contacts"
@@ -51,6 +52,7 @@ async function updateContact (id, editedContact){
       <Route path='/create' element={<ContactsCreate createContact={createContact}/>} />
       <Route path='/edit/:id' element={<EditForm oneContact={oneContact} getOneContact={getOneContact} updateContact={updateContact} />} />
       <Route path='/contacts' element={<ContactsList getContacts={getContacts} contacts={contacts} deleteContact={deleteContact} />} />
+      <Route path='/details/:id' element={<Details getOneContact={getOneContact} oneContact={oneContact} /> }/>
     </Routes>
    </BrowserRouter>
    </>
